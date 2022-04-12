@@ -1,0 +1,26 @@
+<h2>フォームサンプル</h2>
+<form class="demo1-form" [formGroup]="demo1Form">
+  <app-input-text
+    [placeholder]="nameOption.placeholder"
+    formControlName="name"
+    [id]="nameOption.formControlName"
+    [labelName]="nameOption.labelName"
+    [inputWidth]="width"
+  ></app-input-text>
+  <app-input-number></app-input-number>
+  <mat-form-field appearance="fill">
+    <label>AGE: </label>
+    <!-- <mat-label>Name: </mat-label> -->
+    <input
+      matInput
+      placeholder="Placeholder"
+      formControlName="age"
+      id="age"
+      type="number"
+      min="0"
+      max="100"
+    >
+  </mat-form-field>
+  <!-- <p>value: {{ demo1Form.get('name')}}</p> -->
+</form>
+<button (click)="submit()">submit</button>

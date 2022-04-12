@@ -1,0 +1,22 @@
+<div class="text-container">
+  <mat-form-field appearance="fill">
+    <label>{{ labelName }}: </label>
+    <input
+      #input
+      matInput
+      type="text"
+      [attr.placeholder]="placeholder"
+      [attr.id]="labelName"
+      [disabled]="disabled"
+      appInputWidth
+      [inputWidth]="inputWidth"
+      (input)="maskAsInput($event)"
+      (blur)="markAsTouched()"
+    >
+  </mat-form-field>
+  <app-tiny
+    [maxlength]="maxlength"
+    [vlength]="vlength"
+    [input]="input"
+  ></app-tiny>
+</div>
